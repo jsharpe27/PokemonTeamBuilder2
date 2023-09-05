@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Anton', sans-serif;
+  font-family: 'Karla', sans-serif;
+  background-color: #F4F2DE;
+  align-items: center;
+}
+
+.title{
+  background-image: url('./assets/pokemon_bg.png');
+  height: 200px;
+  margin-top: 30px;
+  background-position: center bottom 25%;
+  font-size: x-large;
+  color: #FFFEC4; /* Set the text color */
+  text-shadow: 0 0 5px black;
+  display: flex;
+  justify-content: center;
+}
+
+.starter-screen{
+  text-align: center;
+  justify-content: space-between;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.starter-container{
+  margin-top: 30px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  height: 300px;
+  align-content: baseline;
+}
+
+.bulbasaur{
+  background-color: #7EAA92;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.charmander{
+  background-color: #E97777;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.squirtle{
+  background-color: #96B6C5;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 20px
+}
+
+.starter-name{
+  margin-bottom: -2px;
+  font-size: xx-large;
+}
+.sprite-img{
+  width: 150px;
+  height: 150px
+}
+
+.starter-choice{
+  display: flex;
+  flex-direction: column;
+}
+
+.current-team{
+  display: flex;
+  width: 1200px;
+  background-color: white;
+  margin: 0 auto;
+  border: solid 2px black;
+  padding: 20px;
+  justify-content: center;
+}
+
+.team-title{
+  text-align: center;
+}
+  
+.stat-action{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pokemon-team{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -0px;
+  padding: 10px;
+  border: solid white 2px;
+}
+
+
+.add-button{
+
+}
+
+.select-pokemon-container{
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  margin: 0 auto;
+  width: 300px;
+  margin-top: 20px;
+}
+
+.random-pokemon-container{
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 2px;
+  background: #FFFEC4;
+  color: black;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, .1) inset,
+    0 0 0 1px rgba(0, 0, 0, .7),
+    0 -1px 0 0 rgba(0, 0, 0, .7) inset,
+    0 1px 2px 1px rgba(0, 0, 0, .6);
+  cursor: pointer;
+  transition: 50ms ease-out;
+  font-weight: 600;
+  box-shadow: #494b4b 0px 7px 2px, #000 0px 8px 5px;
+}
+
+.button:hover, .button:focus {
+  cursor: pointer;
+  background: #353535;
+  color: white;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, .05) inset,
+    0 0 0 1px rgba(0, 0, 0, .7),
+    0 -1px 0 0 rgba(0, 0, 0, .7) inset,
+    0 1px 2px 1px rgba(0, 0, 0, .6);
+}
+
+.button:active {
+  background: #181818;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .7) inset,
+    0 1px 0 0 rgba(255, 255, 255, .05),
+    0 1px 2px 1px rgba(0, 0, 0, .6) inset;
+}
