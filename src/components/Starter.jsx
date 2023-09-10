@@ -1,16 +1,30 @@
 import Stats from './Stats'
+import {motion} from 'framer-motion'
 
 const Starter = ({handleStart}) => {
   return (
     
-    <div className="starter-screen">
-      <div className="title">
-            <h1>Build your Pokemon Team!</h1>
-      </div>
-      <h2>Choose a Starter pokemon</h2>
-      <div className="starter-container">
-            <div className="starter-choice bulbasaur">
-                  <h3 className="starter-name">Bulbasaur</h3>
+    <motion.div className='flex items-center justify-center flex-col'
+    initial={{  x:-400}}
+    animate={{  x:0 }}
+    transition={{ type: 'spring', stiffness: 80, damping: 10, duration: 1 }}
+    >
+
+            <motion.h1 className='mb-4 mt-4 px-4 text-2xl 
+            font-medium !leading-[1.5] sm:text-4xl'
+            initial={{  y:-100}}
+            animate={{  y:0 }}
+            transition={{ type: 'spring', stiffness: 80, damping: 10, duration: 1 }}
+            >Build your Pokemon Team!</motion.h1>
+     
+      <h2 className='text-2xl'>Choose a Starter pokemon</h2>
+
+      <div className='flex bg-gray-300 mt-4 gap-[5rem]' >
+            <div>
+                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" 
+                  alt="sprite of Bulbasaur"
+                  />
+                  <h3>Bulbasaur</h3>
                   <Stats
                         id={1}
                         hp={45}  
@@ -20,12 +34,12 @@ const Starter = ({handleStart}) => {
                         specialDefense={65}
                         speed={45}
                   />
-                  <img className="sprite-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="sprite of Bulbasaur" />
-                  <button className="button" onClick={()=> handleStart(1)}>Choose Bulbasaur </button>
+                  <button className='mb-4 mt-4 text-2xl' onClick={()=> handleStart(1)}>Choose Bulbasaur </button>
             </div> 
 
-            <div className="starter-choice charmander">
-                  <h3 className="starter-name">Charmander</h3>
+            <div>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="sprite of Charmander" />
+                  <h3 classNam>Charmander</h3>
                   <Stats
                         id={2}
                         hp={39}  
@@ -35,12 +49,13 @@ const Starter = ({handleStart}) => {
                         specialDefense={50}
                         speed={65}
                   />
-                  <img className="sprite-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="sprite of Charmander" />
-                  <button className="button" onClick={()=> handleStart(4)}>Choose Charmander </button>
+                  
+                  <button onClick={()=> handleStart(4)}>Choose Charmander </button>
             </div> 
 
-            <div className="starter-choice squirtle">
-                  <h3 className="starter-name">Squirtle</h3>
+            <div >
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="sprite of Squirtle" />
+                  <h3 classNam>Squirtle</h3>
                   <Stats
                         id={3}
                         hp={44}  
@@ -50,11 +65,10 @@ const Starter = ({handleStart}) => {
                         specialDefense={64}
                         speed={43}
                   />
-                  <img className="sprite-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="sprite of Squirtle" />
-                  <button className="button" onClick={()=> handleStart(7)}>Choose Squirtle </button>
+                  <button onClick={()=> handleStart(7)}>Choose Squirtle </button>
             </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

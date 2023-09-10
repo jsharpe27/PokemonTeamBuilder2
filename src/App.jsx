@@ -97,7 +97,7 @@ function handleRemovePokemon(pokemonId){
 }
 
   return (
-    <>
+    <body className='bg-orange-50 h-screen'>
       { startApp && <Starter 
                     handleStart={handleStart}
                     />
@@ -118,7 +118,7 @@ function handleRemovePokemon(pokemonId){
                         isRandShowing={isRandShowing}
                         teamFull={teamFull}
                       />}
-    </>
+    </body>
   )
 }
 

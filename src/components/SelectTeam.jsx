@@ -21,12 +21,12 @@ const SelectTeam = ({handleRandPokemon, randPokemon, randNum, handleAddPokemon,i
   return (
     <div>
       
-      <div className="select-pokemon-container">
-      <button className="button add-button" onClick={ ()=> handleRandPokemon(randNum)}>Find Pokemon to add to your team!</button>
-      <h3 className="stat-action">Click pokemon to show stats</h3>
-        <div className="random-pokemon-container">
+      <div >
+      <button  onClick={ ()=> handleRandPokemon(randNum)}>Find Pokemon to add to your team!</button>
+      <h3 >Click pokemon to show stats</h3>
+        <div >
           {randPokemonElement}
-          { isRandShowing && !teamFull ? <button className="button" onClick={ ()=> handleAddPokemon(randPokemon)}>Add Pokemon!</button> : ""}
+          { isRandShowing && !teamFull ? <button onClick={ ()=> handleAddPokemon(randPokemon)}>Add Pokemon!</button> : ""}
           {teamFull && <h3>Your is team full! Remove a pokemon to add another</h3>}
         </div>
       </div>

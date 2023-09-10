@@ -3,9 +3,9 @@ import Stats from './Stats'
 const CurrentTeam = ({team,handleRemovePokemon}) => {
 
     const currentTeamElements = team.map(function(pokemon) {
-        return <div className="pokemon-team" key={pokemon.id}>
+        return <div  key={pokemon.id}>
                     <h2>{pokemon.name}</h2>
-                    <img className="sprite-img" src={pokemon.img} />
+                    <img  src={pokemon.img} />
                     <Stats 
                      id={pokemon.id}
                      hp={pokemon.stats.hp}  
@@ -15,14 +15,14 @@ const CurrentTeam = ({team,handleRemovePokemon}) => {
                      specialDefense={pokemon.stats.special_defense}
                      speed={pokemon.stats.speed}
                     />
-                    <button className='button' onClick={ ()=> handleRemovePokemon(pokemon.id)}>Remove Pokemon</button>
+                    <button onClick={ ()=> handleRemovePokemon(pokemon.id)}>Remove Pokemon</button>
                </div>
     })
 
   return (
     <div>
-      <h2 className="team-title">Your team</h2>
-      <div className="current-team">
+      <h2 >Your team</h2>
+      <div >
           {currentTeamElements}
       </div>
     </div>
