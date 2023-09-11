@@ -90,9 +90,17 @@ function handleShowStats(){
     setShowStats(prevStats => !prevStats)
 }
 
-function handleRemovePokemon(pokemonId){
+/* function handleRemovePokemon(pokemonId){
   const updatedTeamArray = team.filter((pokemon) => pokemon.id !== pokemonId)
   setTeam([...updatedTeamArray])
+  setTeamFull(false)
+} */
+
+function handleRemovePokemon(pokemonId){
+  setTeam((prevTeam) => {
+      const updatedTeamArray = prevTeam.filter((pokemon) => pokemon.id !== pokemonId)
+      return [...updatedTeamArray]
+  })
   setTeamFull(false)
 }
 
