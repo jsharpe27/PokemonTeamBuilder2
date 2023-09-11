@@ -4,9 +4,7 @@ import {motion} from 'framer-motion'
 const Starter = ({handleStart}) => {
   return (
     
-    <div className='flex items-center justify-center flex-col'
-    
-    >
+    <div className='flex items-center justify-center flex-col'>
 
             <motion.h1 className='mb-4 mt-4 px-4 text-2xl 
             font-medium !leading-[1.5] sm:text-4xl'
@@ -39,7 +37,7 @@ const Starter = ({handleStart}) => {
                         speed={45}
                   />
                   <button className='group bg-green-300 font-medium text-black px-6
-                        py-4 mt-3 flex items-center gap-2 rounded-full
+                        py-4 mt-3 flex items-center rounded-full
                         outline-none focus:scale-110 hover:scale-110
                         hover:bg-emerald-900 hover:text-white active:scale-105
                         transition' 
@@ -62,7 +60,7 @@ const Starter = ({handleStart}) => {
                   />
                   
                   <button className='group bg-red-300 font-medium text-black px-6
-                        py-4 mt-3 flex items-center gap-2 rounded-full
+                        py-4 mt-3 flex items-center rounded-full
                         outline-none focus:scale-110 hover:scale-110
                         hover:bg-red-900 hover:text-white active:scale-105
                         transition' 
@@ -84,7 +82,7 @@ const Starter = ({handleStart}) => {
                               speed={43}
                         />
                   <button className='group bg-blue-300 font-medium text-black px-6
-                        py-4 mt-3 flex items-center gap-2 rounded-full
+                        py-4 mt-3 flex items-center rounded-full
                         outline-none focus:scale-110 hover:scale-110
                         hover:bg-blue-900 hover:text-white active:scale-105
                         transition' 

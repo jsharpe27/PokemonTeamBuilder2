@@ -35,7 +35,7 @@ const CurrentTeam = ({team,handleRemovePokemon}) => {
 
   return (
     
-     <div className='flex items-center justify-center'
+     <div className='flex items-center justify-center pt-[5rem]'
    
       >
           {currentTeamElements}

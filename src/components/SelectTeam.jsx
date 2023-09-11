@@ -3,9 +3,10 @@ import Stats from './Stats'
 const SelectTeam = ({handleRandPokemon, randPokemon, randNum, handleAddPokemon,isRandShowing, showStats, handleShowStats,teamFull}) => {
 
   const randPokemonElement = randPokemon.map(function(pokemon){
-      return <div key={pokemon.id}>
-          <h2>{pokemon.name}</h2>
-          <img onClick={handleShowStats} src={pokemon.img} />
+      return <div className='flex flex-col items-center ' key={pokemon.id}>
+          <h1 className='mt-[1rem] text-2xl text-white' >Click pokemon to show stats</h1>
+          <h2 className='mt-[1rem] text-2xl text-white capitalize'>{pokemon.name}</h2>
+          <img width="196" height="196" onClick={handleShowStats} src={pokemon.img} />
           { showStats && <Stats 
                      id={pokemon.id}
                      hp={pokemon.stats.hp}  
@@ -19,18 +20,24 @@ const SelectTeam = ({handleRandPokemon, randPokemon, randNum, handleAddPokemon,i
   })
 
   return (      
-      <div className='mt-[5rem] flex flex-col items-center'>
+      <div className='mt-[5rem] flex flex-col items-center bg-slate-600 p-10'>
         <button  onClick={ ()=> handleRandPokemon(randNum)}
-        className='group bg-black  font-medium text-white px-6
-        py-2 mt-3 flex items-center gap-2 rounded-full
+        className='group bg-blue-600  font-medium text-white px-6
+        py-2 flex items-center gap-2 rounded-full
         outline-none focus:scale-110 hover:scale-110
-        hover:bg-blue-600 hover:text-yellow-100 active:scale-105
+         hover:text-yellow-300 active:scale-105
         transition'
         >Find Pokemon to add to your team!</button>
-        <h3 >Click pokemon to show stats</h3>
-          <div >
+        
+          <div className='flex flex-col items-center'>
             {randPokemonElement}
-            { isRandShowing && !teamFull ? <button onClick={ ()=> handleAddPokemon(randPokemon)}>Add Pokemon!</button> : ""}
+            { isRandShowing && !teamFull ? <button onClick={ ()=> handleAddPokemon(randPokemon)}
+                                        className='group bg-blue-600  font-medium text-white px-6
+                                        py-4 mt-3 flex items-center gap-2 outline-none 
+                                        hover:bg-black hover:text-yellow-300 active:scale-105
+                                        transition'
+            >
+              Add Pokemon!</button> : ""}
             {teamFull && <h3>Your is team full! Remove a pokemon to add another</h3>}
           </div>
       </div>
