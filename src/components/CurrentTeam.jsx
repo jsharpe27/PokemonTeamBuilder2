@@ -26,7 +26,7 @@ const CurrentTeam = ({team,handleRemovePokemon}) => {
                     <button onClick={ ()=> handleRemovePokemon(pokemon.id)}
                     className='group bg-gray-500 font-medium text-white px-6
                     py-4 mt-3 flex items-center gap-2 outline-none focus:scale-110 
-                    hover:bg-emerald-900 hover:text-white active:scale-105
+                    hover:bg-black hover:text-red-300 active:scale-105
                     transition'
                     
                     >Remove Pokemon</button>
