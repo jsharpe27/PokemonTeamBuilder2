@@ -18,19 +18,22 @@ const SelectTeam = ({handleRandPokemon, randPokemon, randNum, handleAddPokemon,i
       </div>
   })
 
-  return (
-    <div>
-      
-      <div >
-      <button  onClick={ ()=> handleRandPokemon(randNum)}>Find Pokemon to add to your team!</button>
-      <h3 >Click pokemon to show stats</h3>
-        <div >
-          {randPokemonElement}
-          { isRandShowing && !teamFull ? <button onClick={ ()=> handleAddPokemon(randPokemon)}>Add Pokemon!</button> : ""}
-          {teamFull && <h3>Your is team full! Remove a pokemon to add another</h3>}
-        </div>
+  return (      
+      <div className='mt-[5rem] flex flex-col items-center'>
+        <button  onClick={ ()=> handleRandPokemon(randNum)}
+        className='group bg-black  font-medium text-white px-6
+        py-2 mt-3 flex items-center gap-2 rounded-full
+        outline-none focus:scale-110 hover:scale-110
+        hover:bg-blue-600 hover:text-yellow-100 active:scale-105
+        transition'
+        >Find Pokemon to add to your team!</button>
+        <h3 >Click pokemon to show stats</h3>
+          <div >
+            {randPokemonElement}
+            { isRandShowing && !teamFull ? <button onClick={ ()=> handleAddPokemon(randPokemon)}>Add Pokemon!</button> : ""}
+            {teamFull && <h3>Your is team full! Remove a pokemon to add another</h3>}
+          </div>
       </div>
-    </div>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Stats = ({hp,attack,defense,specialAttack,specialDefense,speed}) => {
   return (
-    <div>
+    <div className='flex flex-col items-center'>
         <p>Hit Points: {hp}</p>
         <p>Attack: {attack}</p>
         <p>Defense: {defense}</p>

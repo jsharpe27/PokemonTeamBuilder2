@@ -23,11 +23,12 @@ const Starter = ({handleStart}) => {
       animate={{  x:0 }}
       transition={{ type: 'spring', stiffness: 80, damping: 10, duration: 1 }}
       >
-            <div className='flex flex-col '>
+            <div className='flex flex-col items-center '>
                   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" 
+                  width="196" height="196"
                   alt="sprite of Bulbasaur"
                   />
-                  <h3>Bulbasaur</h3>
+                  <h3 className='font-medium mb-4'>Bulbasaur</h3>
                   <Stats
                         id={1}
                         hp={45}  
@@ -37,17 +38,19 @@ const Starter = ({handleStart}) => {
                         specialDefense={65}
                         speed={45}
                   />
-                  <button className='group bg-green-300 text-black px-7
-                        py-3 flex items-center gap-2 rounded-full
+                  <button className='group bg-green-300 font-medium text-black px-6
+                        py-4 mt-3 flex items-center gap-2 rounded-full
                         outline-none focus:scale-110 hover:scale-110
                         hover:bg-emerald-900 hover:text-white active:scale-105
                         transition' 
                         onClick={()=> handleStart(1)}>Choose Bulbasaur </button>
             </div> 
 
-            <div className='flex flex-col'>
-                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="sprite of Charmander" />
-                  <h3 classNam>Charmander</h3>
+            <div className='flex flex-col items-center'>
+                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" 
+                  width="196" height="196"
+                  alt="sprite of Charmander" />
+                  <h3 className='font-medium mb-4'>Charmander</h3>
                   <Stats
                         id={2}
                         hp={39}  
@@ -58,28 +61,30 @@ const Starter = ({handleStart}) => {
                         speed={65}
                   />
                   
-                  <button className='group bg-red-300 text-black px-7
-                        py-3 flex items-center gap-2 rounded-full
+                  <button className='group bg-red-300 font-medium text-black px-6
+                        py-4 mt-3 flex items-center gap-2 rounded-full
                         outline-none focus:scale-110 hover:scale-110
                         hover:bg-red-900 hover:text-white active:scale-105
                         transition' 
                   onClick={()=> handleStart(4)}>Choose Charmander </button>
             </div> 
 
-            <div className='flex flex-col'>
-                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="sprite of Squirtle" />
-                  <h3 classNam>Squirtle</h3>
-                  <Stats
-                        id={3}
-                        hp={44}  
-                        attack={48}
-                        defense={65}
-                        specialAttack={50}
-                        specialDefense={64}
-                        speed={43}
-                  />
-                  <button className='group bg-blue-300 text-black px-7
-                        py-3 flex items-center gap-2 rounded-full
+            <div className='flex flex-col items-center'>
+                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" 
+                  width="196" height="196"
+                  alt="sprite of Squirtle" />
+                  <h3 className='font-medium mb-4'>Squirtle</h3>
+                        <Stats 
+                              id={3}
+                              hp={44}  
+                              attack={48}
+                              defense={65}
+                              specialAttack={50}
+                              specialDefense={64}
+                              speed={43}
+                        />
+                  <button className='group bg-blue-300 font-medium text-black px-6
+                        py-4 mt-3 flex items-center gap-2 rounded-full
                         outline-none focus:scale-110 hover:scale-110
                         hover:bg-blue-900 hover:text-white active:scale-105
                         transition' 
