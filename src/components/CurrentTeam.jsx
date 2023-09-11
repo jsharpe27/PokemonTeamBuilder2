@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const CurrentTeam = ({team,handleRemovePokemon}) => {
 
     const currentTeamElements = team.map(function(pokemon) {
-        return <motion.div className='bg-gray-200 flex flex-col items-center'  key={pokemon.id}
+        return <motion.div className='bg-gray-200 flex flex-col items-center pt-3'  key={pokemon.id}
         initial={{ opacity: 0, scale:0 }}
         animate={{ opacity: 1, scale:1 }}
         transition={{
@@ -12,7 +12,7 @@ const CurrentTeam = ({team,handleRemovePokemon}) => {
             duration: 0.2,
           }}
                >
-                    <h2>{pokemon.name}</h2>
+                    <h2 className='font-medium capitalize text-2xl'>{pokemon.name}</h2>
                     <img  src={pokemon.img} />
                     <Stats 
                      id={pokemon.id}
