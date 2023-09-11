@@ -23,7 +23,7 @@ const SelectTeam = ({handleRandPokemon, randPokemon, randNum, handleAddPokemon,i
   })
 
   return (      
-      <div className='mt-[2rem] flex flex-col items-center bg-slate-600 p-10'>
+      <div className='mt-[2rem] flex flex-col items-center bg-slate-500 p-10'>
         <button  onClick={ ()=> handleRandPokemon(randNum)}
         className='group bg-blue-600 text-2xl font-medium text-white px-6
         py-2 flex items-center gap-2 rounded-full
